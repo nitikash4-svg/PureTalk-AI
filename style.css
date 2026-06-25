@@ -1,0 +1,1652 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 70px;
+}
+.about-section{
+    scroll-margin-top:70px;
+}
+.nav-links a.active{
+    color:#00adb5 !important;
+}
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7fd; 
+    height: 60px;
+    padding: 0 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo Styling */
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Image Size Constraint Fixed to perfectly fit 60px Nav */
+.nav-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.nav-logo a span {
+    color: #00adb5; 
+}
+
+/* Navigation Links Wrapper */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition:  0.03s ;
+}
+.nav-links a.active{
+    color: #00adb5;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+
+/* Right Side Wrapper (Login + CTA) */
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Login Link */
+.login {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login:hover {
+    color: #00adb5;
+}
+
+/* Call to Action Button */
+.btn-cta {
+    background-color: #00adb5;
+    color: #ffffff;
+    padding: 9px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #008c95;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   2. MOBILE RESPONSIVE MEDIA QUERY 
+   ========================================== */
+
+/* Media Query for Mobile Devices (768px ya usse choti screens) */
+@media (max-width: 768px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 10px 4%;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+
+    /* Logo */
+
+    .nav-logo a {
+
+        font-size: 20px;
+
+    }
+
+
+    .nav-logo img {
+
+        height: 28px;
+
+    }
+
+
+
+
+
+    /* Links */
+
+    .nav-links {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        padding: 0;
+
+    }
+
+
+
+    .nav-links a {
+
+        font-size: 13px;
+
+        padding: 3px 5px;
+
+    }
+
+
+
+
+
+    /* Buttons */
+
+    .nav-cta {
+
+        width: auto;
+
+        gap: 12px;
+
+        padding: 0;
+
+    }
+
+
+
+    .login {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .btn-cta {
+
+        padding: 7px 14px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* --- Hero Section Starts --- */
+.Hero {
+   
+    /* min-height: calc(100vh - 60px);      */
+    align-items: center;
+    padding: 40px 4% 80px ;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.Hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.Hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.Hero-content .Hero-highlight {
+    color: #00adb5;
+}
+
+.Hero-content .hero-desc {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #606073;
+    margin-bottom: 30px;
+}
+
+/* Buttons Container */
+.Hero-bttn {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px; /* Gives perfect spacing above the users text */
+}
+
+.Start-Chatting {
+    background-color: #00adb5;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.Start-Chatting:hover {
+    background-color: #008c95;
+    transform: translateY(-2px);
+}
+
+.Learn-more {
+    background-color: transparent;
+    color: black;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #393e46;
+    transition: all 0.3s ease;
+}
+
+.Learn-more:hover {
+    border-color: #00adb5;
+    color: #00adb5;
+    transform: translateY(-2px);
+}
+
+/* --- Fixed Users Paragraph & Bullet Styling --- */
+.users p {
+    font-size: 14px;
+    color: #808091; 
+    font-weight: 500;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between bullet and text */
+}
+
+/* Creating the custom bullet point via CSS */
+.users p::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #00adb5; /* Matches your teal theme */
+    border-radius: 50%; /* Makes it a clean round dot */
+    flex-shrink: 0;
+}
+
+/* Image Wrapper and Fixed Animation */
+.Hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.Hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    animation: float 5s ease-in-out infinite;
+}
+/* HERO MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+    .Hero {
+        padding: 30px 5% 50px;
+    }
+
+    .Hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+
+    .Hero-content h1 {
+        font-size: 34px;
+    }
+
+
+    .Hero-content .hero-desc {
+        font-size: 16px;
+    }
+
+
+    .Hero-bttn {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .Hero-image {
+        width: 100%;
+    }
+
+
+    .Hero-image img {
+
+        width: 100%;
+        max-width: 380px;   /* yaha size control hoga */
+        height: auto;
+
+    }
+
+}
+/* FIXED: Smooth vertical floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* FEATURE SECTION KE LIYE */
+.features{
+    background-color: #f7f7fd; /* Aapke light theme background se bilkul match karta hua */
+     padding: 40px 4% 80px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.features-header .badge{
+    background-color: #deebfe;
+    color: #5856d6;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.features-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+}
+
+/* --- Grid Configuration --- */
+.features-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px; /* Cards ke aapas ki dori */
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* responsive banane ke liye choti screens par auto break ho jayega */
+}
+
+/* --- Individual Card Design --- */
+.feature-card {
+    background: #ffffff;
+    flex: 1;
+    min-width: 250px; /* Mobile horizontal scrolling / wrap control */
+    max-width: 280px;
+    padding: 35px 25px;
+    border-radius: 18px; /* Clean matching smooth rounded edges */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); /* Ekdum minimal sublte drop shadow */
+    border: 1px solid rgba(0, 0, 0, 0.01); /* Bohot halka bounding edge */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Subte left side orientation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gentle interactive hover effect */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Rounded Icons Context Elements --- */
+.icon-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.icon-wrapper .icon {
+    font-size: 24px;
+}
+
+/* Background Variations as per your layout blueprint */
+.purple-bg { background-color: #ededff; }
+.green-bg  { background-color: #e3f9eb; }
+.blue-bg   { background-color: #e3f2fd; }
+.red-bg    { background-color: #ffebee; }
+
+/* --- Card Text Typography --- */
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* For how to work */
+
+
+
+
+/* --- FIXED: Section Wrapper ka naam badal diya taaki conflict na ho --- */
+.work-section {
+    background-color: #f7f7fd; 
+    padding: 40px 4% 80px 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pure content ko horizontal center karega */
+    justify-content: center;
+    width: 100%;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.work-header .badge {
+    background-color: #deebfe;
+    color: #5856d6;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.work-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+}
+
+/* --- Grid Container (Cards ko row mein align aur center karega) --- */
+/* --- Grid Container Configuration --- */
+.work-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Isse icons aur headings ek line mein rahengi */
+    gap: 80px; /* Arrows ko fit karne ke liye gap thoda badha diya hai */
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* --- Individual Card Design --- */
+.work-card {
+    background: transparent; /* Jaisa image mein hai, bina white box ke background white ya transparent */
+    flex: 1;
+    min-width: 240px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Image mein saara content centered aligned hai */
+    text-align: center; 
+    position: relative; /* REQUIRED: Taaki arrows iske respect mein position ho sakein */
+}
+
+/* --- Adding the Connecting Arrows via CSS --- */
+.work-card:not(:last-child)::after {
+    content: "→"; /* Aap direct text arrow ya fir koi modern icon code use kar sakte hain */
+    position: absolute;
+    top: 28px; /* Icon-wrapper ke vertical center line ke hisab se setup kiya hai */
+    right: -55px; /* Dono cards ke exact beech mein arrow set karne ke liye */
+    font-size: 26px;
+    color: #b3b3cb; /* Light gray-purple tone jaisa screenshot mein hai */
+    font-weight: 300;
+    pointer-events: none;
+}
+
+/* --- Text Typography Changes for Center Design --- */
+.work-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.work-card p {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.icon-wrapper {
+    width: 65px; /* Screenshot ke mutabik thoda bada circular look */
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* --- Optional Responsive Fix for Mobile Screens --- */
+@media (max-width: 768px) {
+    .work-grid {
+        gap: 40px;
+    }
+    /* Mobile screen par row vertical ho jati hai, isliye horizontal arrow ko chhupa denge */
+    .work-card:not(:last-child)::after {
+        content: "↓"; /* Horizontal arrow ko vertical arrow mein badal diya */
+        top: auto;
+        bottom: -30px;
+        right: calc(50% - 10px);
+    }
+}
+
+
+/* FOR THE UI DEMO */
+
+/* UI DEMO SECTION */
+.UI-demo {
+
+    border-radius: 30px;
+
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+
+
+
+/* MAIN CONTAINER */
+
+.UI-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.UI-container:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+
+
+
+/* =========================
+        LEFT SIDE
+========================= */
+
+
+.UI-left {
+
+    flex: 1;
+
+    max-width: 600px;
+
+}
+
+
+
+.UI-highlight {
+
+
+    background-color: rgb(222,235,254);
+
+    color:#5856d6;
+
+
+    font-size:14px;
+
+    font-weight:600;
+
+
+    padding:7px 16px;
+
+    border-radius:20px;
+
+
+    display:inline-block;
+
+
+    margin-bottom:20px;
+
+}
+
+
+
+.UI-title {
+
+
+    font-size:42px;
+
+    font-weight:800;
+
+
+    line-height:1.2;
+
+
+    color:black;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.UI-description {
+
+
+    font-size:18px;
+
+
+    line-height:1.6;
+
+
+    color:#606073;
+
+
+    max-width:500px;
+
+
+}
+
+
+
+
+
+/* =========================
+        RIGHT SIDE
+========================= */
+
+
+.UI-right {
+
+
+    flex:1;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+}
+
+.UI-right img {
+
+    width:100%;
+    max-width:500px;
+    height:auto;
+    object-fit:contain;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+
+    opacity:0;
+    transform:translateX(-100px);
+    transition:0.8s ease;
+
+}
+
+
+.UI-right.show img {
+
+    opacity:1;
+    transform:translateX(0);
+
+}
+
+
+
+/* =========================
+        TABLET
+========================= */
+
+
+@media(max-width:900px){
+
+
+
+    .UI-container {
+
+
+        flex-direction:column;
+
+
+        text-align:center;
+
+
+        gap:35px;
+
+
+        margin:50px auto;
+
+
+    }
+
+
+
+    .UI-left {
+
+
+        max-width:100%;
+
+
+    }
+
+
+
+
+    .UI-description {
+
+
+        max-width:100%;
+
+
+    }
+
+
+
+    .UI-right {
+
+
+        width:100%;
+
+
+    }
+
+
+
+    .UI-right img {
+
+
+        max-width:450px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+
+@media(max-width:600px){
+
+
+
+    .UI-demo {
+
+
+        margin-left:3%;
+
+
+        margin-right:3%;
+
+
+    }
+
+
+
+
+    .UI-container {
+
+
+        margin:30px auto;
+
+
+        padding:20px;
+
+
+        border-radius:15px;
+
+
+        gap:25px;
+
+
+    }
+
+
+
+
+
+    .UI-title {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+
+
+    .UI-description {
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+
+
+    .UI-right img {
+
+
+        width:100%;
+
+
+        border-radius:18px;
+
+
+    }
+
+
+
+
+
+    .UI-container:hover {
+
+
+        transform:none;
+
+
+    }
+
+
+
+}
+/* FLOAT ANIMATION */
+
+.footer {
+
+    width:100%;
+
+   
+
+    background:white;
+
+}
+
+
+
+/* TOP BAR */
+
+.safety-bar {
+
+    background:#f8f7ff;
+
+    border-radius:15px 15px 0 0;
+
+    padding: 35px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+
+
+.safety-title h3 {
+
+    font-size:18px;
+
+    color:#111827;
+
+}
+
+
+
+.safety-item {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:13px;
+
+    color:#4b5563;
+
+}
+
+
+.safety-item span {
+
+    font-size:22px;
+
+}
+
+
+
+/* MAIN FOOTER */
+
+
+.footer-main {
+
+
+    background:#10152f;
+
+    color:white;
+
+    border-radius:0 0 15px 15px;
+
+    padding:70px 60px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr 1.3fr;
+
+    gap:50px;
+
+    min-height:450px;;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+
+.footer-brand h2 {
+
+    font-size:22px;
+
+}
+
+
+.footer-brand h2 span {
+
+    color:#00adb5;
+
+}
+
+
+
+.footer-brand p {
+
+    margin-top:15px;
+
+    color:#aeb4c8;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+
+.socials {
+
+    margin-top:20px;
+
+    color:#cdd2e5;
+
+}
+
+
+
+/* LINKS */
+
+
+.footer-links h4,
+.subscribe h4 {
+
+    margin-bottom:15px;
+
+}
+
+
+
+.footer-links a {
+
+    display:block;
+
+    color:#aeb4c8;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    cursor:pointer;
+    text-decoration: none;
+}
+
+
+
+.footer-links p {
+
+    color:#aeb4c8;
+
+    font-size:14px;
+    
+}
+
+
+
+/* SUBSCRIBE */
+
+
+.subscribe p {
+
+    color:#aeb4c8;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.subscribe input {
+
+    width:100%;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    border:1px solid #3a4265;
+
+    background:#161c3b;
+
+    color:white;
+
+}
+
+
+
+.subscribe button {
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#635bff;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* COPYRIGHT */
+
+
+.copyright {
+
+    text-align:center;
+
+    color:#8f96ad;
+
+    font-size:13px;
+
+    margin-top:-35px;
+
+    position:relative;
+
+    padding-bottom:15px;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px){
+
+.footer-main{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+
+.safety-bar{
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.footer-main{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.safety-bar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+}
+
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.animate-scroll {
+
+    animation: appear linear;
+
+    animation-timeline: view();
+
+    animation-range: entry 0% cover 40%;
+
+}
+
+
+
+/* FOR LOGIN PAGE */
+
+/* LOGIN PAGE */
+
+
+.login-page {
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f7f7fd;
+
+}
+
+
+
+
+.login-card {
+
+
+    width:380px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+.login-logo {
+
+
+    text-align:center;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+
+}
+
+
+.login-logo {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+
+.login-logo img {
+
+    height:40px;
+
+    width:auto;
+
+}
+
+
+.login-logo b {
+
+    color:#00adb5;
+
+}
+
+
+
+.login-card h2{
+
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+.login-card p{
+
+
+    text-align:center;
+
+    color:#6c757d;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.input-box{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.input-box label{
+
+
+    display:block;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+
+}
+
+
+.input-box input {
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#ffffff;   /* input box ka background */
+
+    color:#111827;        /* text ka color */
+
+}
+
+
+
+.input-box input:focus{
+
+
+    border-color:#00adb5;
+
+
+}
+
+
+
+
+
+
+
+
+.forgot{
+
+
+    text-align:right;
+
+    margin-bottom:20px;
+
+
+}
+
+
+.forgot a{
+
+
+    color:#00adb5;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.login-btn{
+
+
+    width:100%;
+
+
+    padding:13px;
+
+
+    border:none;
+
+    border-radius:50px;
+
+
+    background:#00adb5;
+
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.login-btn:hover{
+
+
+    background:#008c95;
+
+
+}
+
+
+
+
+.signup{
+
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#666;
+
+
+}
+
+
+.signup a{
+
+
+    color:#00adb5;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+@media(max-width:500px){
+
+
+.login-card{
+
+
+    width:90%;
+
+    padding:30px;
+
+
+}
+
+
+}
+
+
+.nav-links-login {
+
+    list-style: none;
+
+}
+
+
+.home-btn {
+
+    background:#00adb5;
+
+    color:white !important;
+
+    padding:10px 25px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s ease;
+  
+
+}
+
+
+.home-btn:hover {
+
+    background:#008c95;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ---------------SIGN UP PAGE ----------------- */
+
+.otp-text {
+
+    text-align:center;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    color:#6c757d;
+
+}
+
+
+.otp-text a {
+
+    color:#00adb5;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+
+.otp-text a:hover {
+
+    text-decoration:underline;
+
+}
